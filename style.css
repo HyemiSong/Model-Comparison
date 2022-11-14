@@ -58,6 +58,14 @@ html, body {
     float: right;
 }
 
+#s1_2_viz{
+    margin-right: calc(100%-500px);
+    width: 75%;
+    position: sticky;
+    top: 0px;
+    float: right;
+}
+
 #s1_3_viz{
     margin-right: calc(100%-500px);
     width: 75%;
@@ -66,7 +74,7 @@ html, body {
     float: right;
 }
 
-#s1_2_viz{
+#s1_4_viz{
     margin-right: calc(100%-500px);
     width: 75%;
     position: sticky;
