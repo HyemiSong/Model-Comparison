@@ -1,88 +1,16 @@
-// test
-// Scrolling Mechanism:
-var current_viz = 0
-var viz_ids = [
-  '#viz_1_1',
-  '#viz_1_2',
-  '#viz_1_3',
-  '#viz_1_4',
-]
-
-d3.graphScroll()
-    .graph(d3.selectAll('#graph'))
-    .container(d3.select('#main'))
-    .sections(d3.selectAll('#sections > div'))
-    .on('active', function (i) {
-        console.log("At section " + i);
-        updateViz(i)
-    })
-
-function updateViz(i) {
-  d3.select(viz_ids[current_viz]).style('display', 'none')
-  d3.select(viz_ids[i]).style('display','block')
-  current_viz = i
-}
-
-// Getting the data via promise so you can work through irises as well to get the data
-
-// var irises = {}
-
-// Promise.all([
-//   d3.csv('iris.csv', function (row) {
-//     var node = {
-//         id: +row['Id'], sepalLength: +row['SepalLengthCm'],
-//         sepalWidth: +row['SepalWidthCm'],petalLength: +row['PetalLengthCm'],
-//         petalWidth: +row['PetalWidthCm'],species: +row['Species'],
-//     };
-//     irises[node-id] = node;
-
-//     return node;
-//   }), 
-// ])
-
-/* Visualizations: */
-var width = 680
-var widthMargin = 20
-var height = 640
-var heightMargin = 60
-
-var lengthScale = d3.scaleLinear()
-.domain([4,8]).range([heightMargin, height-heightMargin]);
-
-var widthScale = d3.scaleLinear()
-.domain([1.8,4.5]).range([height-heightMargin, heightMargin]);
-
-function scaleLength(SepalLengthCm) {
-  return lengthScale(SepalLengthCm);
-}
-
-function scaleWidth(SepalWidthCm) {
-  return widthScale(SepalWidthCm);
-}
-
-var kfoldDots;
-
-var dataset;
-d3.csv('iris.csv').then(function(data) {
-  dataset = data
-  kfold(dataset);
-  //sections-newly drawing visualization or update visual channels (color, position etc)
-  viz11(dataset);
-  viz12(dataset);
-}); //dataloader
 
 function kfold(dataset){
-var svg = d3.select('#viz_1_3').append('svg')
-  .attr('width', width)
-  .attr('height', height)
+    var svg = d3.select('#viz_1_3').append('svg')
+    .attr('width', width)
+    .attr('height', height)
 
-var radius = 30;
-var count = [1,2,3,4,5];
-var pieData = {a:20,b:80}
-var dots = svg.selectAll('g').data(count)
-var pieArea = svg.append('g')
+    var radius = 30;
+    var count = [1,2,3,4,5];
+    var pieData = {a:20,b:80}
+    var dots = svg.selectAll('g').data(count)
+    var pieArea = svg.append('g')
 
-pieCharts(pieArea, radius, count, pieData)
+    pieCharts(pieArea, radius, count, pieData)
 }
 
 function pieCharts(pieArea, radius, count, pieData){

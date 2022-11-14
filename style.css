@@ -43,6 +43,9 @@ html, body {
 	opacity: 1;
 }
 
+.axis-txt{
+    font-size: 0.8em;
+}
 /* 
   Visualizations:
   This is kind of janky but you have to create a new one of these for each visualization 
