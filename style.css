@@ -17,7 +17,6 @@ html, body {
     margin: 20px;
     position: relative;
 }
-  
 
 /* Text */
 
@@ -25,6 +24,9 @@ html, body {
    width: 25%;
 }
 
+.text-posi{
+margin-left: 75%;
+}
 .section-text{
     height: 100%;
     margin: 0px 0px 500px;
@@ -43,6 +45,51 @@ html, body {
 	opacity: 1;
 }
 
+.text-sm{
+    font-size: 0.8em;
+}
+
+.text-md{
+    font-size: 1.5em;
+}
+.text-bold{
+    font-weight: 800;
+}
+
+/*btn*/
+.controler{
+    position: absolute;
+    left: 550px;
+    top: 125px;
+}
+
+.botton1 {
+    background-color: #323D52;
+    border: none;
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+#fold_dropdown, #fold_apply, #k_dropdown, #k_apply{
+    width: 100px;
+}
+
+.margin_ssm{
+    margin-top: 2px;
+}
+.margin_sm{
+    margin-top: 5px;
+}
+.margin_md{
+    margin-top: 10px;
+}
+.margin_lg{
+    margin-top: 20px;
+}
 /* 
   Visualizations:
   This is kind of janky but you have to create a new one of these for each visualization 
@@ -50,28 +97,21 @@ html, body {
   It breaks it. Why? beats me.
 */
 
-#s1_1_viz{
+#_1_intro, #_2_dataprep, #_3_classifier, #_4_comparison, #_5_kfold, #_6_parameter, #_7_modelselect, #_8_featureselect{
     margin-right: calc(100%-500px);
     width: 75%;
     position: sticky;
     top: 0px;
-    float: right;
+    float: left;
 }
 
-#s1_3_viz{
-    margin-right: calc(100%-500px);
-    width: 75%;
-    position: sticky;
-    top: 0px;
-    float: right;
-}
-
-#s1_2_viz{
-    margin-right: calc(100%-500px);
-    width: 75%;
-    position: sticky;
-    top: 0px;
-    float: right;
+.visView{
+    /* margin: 0 auto;  */
+    padding-top: 50px;
+    height: 640px; 
+    width: 680px; 
+    /* border: 1px solid blue;  */
+    display: none;
 }
 
 circle:hover {
@@ -82,6 +122,34 @@ circle:hover {
     text-align: center;
 }
 
+line {    
+    transition: 0.5s;
+}
+
 .button-container-div2 {
     text-align: center;
+}
+
+.tooltip {
+	position: absolute;
+	top: 100px;
+	left: 100px;
+  -moz-border-radius:5px;
+	border-radius: 5px;
+  border: 2px solid #000;
+  background: #fff;
+	opacity: .9;
+  color: black;
+	padding: 10px;
+	width: 300px;
+	font-size: 12px;
+	z-index: 10;
+}
+
+.tooltip .title {
+	font-size: 13px;
+}
+
+.tooltip .name {
+  font-weight:bold;
 }
