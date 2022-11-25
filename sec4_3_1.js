@@ -38,8 +38,8 @@ var iris_data = []
 var r = 8;
 
 var svg = d3.select('#sec4_3').append('svg')
-.attr('width', width)
-.attr('height', height)
+.attr('width', w_width)
+.attr('height', w_height)
 
 function sec4_3_1() {
 

@@ -1,7 +1,7 @@
 // Scrolling Mechanism:
 var current_viz = 0
 var viz_ids = [
-  '#sec1',
+  '#sec1_1',
   '#sec2_1', //2_1_1
   '#sec2_1', //2_1_2
   '#sec2_2', //2_2_1
@@ -9,22 +9,24 @@ var viz_ids = [
   '#sec4_1', //sec4_1_1
   '#sec4_2', //sec4_2_1
   '#sec4_3', //sec4_3_1
+  '#sec4_6', //sec4_6_1
   '#sec5_1', //sec5_1_1
   '#sec6_1', //sec6_1_1
   '#sec7_1', //sec7_1_1
-  '#sec8',
+  '#sec8_1', //sec8_1_1
 ]
 
 var viz_fns = [
-  sec1, 
+  sec1_1_1, 
   sec2_1_1, sec2_1_2, sec2_2_1,
   sec3_1_1, 
   sec4_1_1, sec4_2_1,
   sec4_3_1,
+  sec4_6_1,
   sec5_1_1,
   sec6_1_1,
   sec7_1_1, 
-  sec8
+  sec8_1_1,
 ]
 
 var viz_loaded = [
@@ -79,14 +81,14 @@ Promise.all([
 
 /* Visualizations: */
 
-var width = 680
-var widthMargin = 20
-var height = 640
-var heightMargin = 60
+// var width = window.width
+// var height = 640
+// var widthMargin = 20
+// var heightMargin = 60
 
 // Display for viz 1.1
-function sec1(){
-}
+// function sec1_1_1(){
+// }
 function sec2_2_1(){
   d3.csv('iris.csv').then((data) => display_sec2_2_1(null, data));
   // setup the buttons.
@@ -98,6 +100,8 @@ function sec3(){
 // }
 // function sec4_2_1(){
 // }
+// function sec4_6_1(){
+// }
 // function sec5_1_1(){
 // }
 function sec6_1_1(){
@@ -106,5 +110,6 @@ function sec6_1_1(){
 function sec7_1_1(){
   d3.csv('iris.csv').then((data) => display_sec7_1_1(null, data));
 }
-function sec8(){
+function sec8_1_1(){
+  d3.csv('iris.csv').then((data) => display_sec8_1_1(null, data));
 }

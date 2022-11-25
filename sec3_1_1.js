@@ -1,6 +1,7 @@
 function sec3_1_1() {
     var svg = d3.select("#sec3").append("svg")
-        .attr('width', width).attr('height', height)
+    .attr('width', w_width)
+    .attr('height', w_height)
 
     var dataX = 160
     var modelX = 450;

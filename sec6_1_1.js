@@ -1,8 +1,8 @@
 // _6_parameta
 function sec6_1_1(){
     var svg = d3.select('#sec6_1').append('svg')
-    .attr('width', width)
-    .attr('height', height)
+    .attr('width', w_width)
+    .attr('height', w_height)
   
     var radius = 30;
     var count = [1,2,3,4,5];

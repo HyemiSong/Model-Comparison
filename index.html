@@ -12,7 +12,9 @@
         <div id="main">
                 <!-- Add a section block for every visualization we want -->
                 <div id="_1_intro">
-                        <div class="viz visView" id="sec1"></div>
+                        <div class="viz visView" id="sec1_1">
+                                <div class="intro_title center-topbotton text-mlg">Learning ML Model Comparison</div>
+                        </div>
                 </div>
                 <div id="_2_dataprep">
                         <div class="viz visView" id="sec2_1">
@@ -32,16 +34,19 @@
                         <div class="viz visView" id="sec4_1">
                         </div>
                         <div class="viz visView" id="sec4_2">
-                                <div class="button-container-div">
-                                </div>
+                                <div class="button-container-div"></div>
                         </div>
                         <div class="viz visView" id="sec4_3">
                                 <div id="toolbar-knn">
-                                        <button id="knn1" class="button-knn knn-active">KNN-1</button>
+                                        <!-- <button id="knn1" class="button-knn knn-active">KNN-1</button>
                                         <button id="knn3" class="button-knn">KNN-3</button>
                                         <button id="knn5" class="button-knn">KNN-5</button>
                                         <button id="knn10" class="button-knn">KNN-10</button>
-                                        <button id="knn20" class="button-knn">KNN-20</button>
+                                        <button id="knn20" class="button-knn">KNN-20</button> -->
+                                </div>
+                        </div>
+                        <div class="viz visView" id="sec4_6">
+                                <div class="button-container-div">
                                 </div>
                         </div>
                 </div>
@@ -62,16 +67,9 @@
                                                 </select>
                                         </div>
                                         <div class="apply">
-                                                <button id="fold_apply" class="margin_md botton1">Apply</button>
+                                                <button id="fold_apply" class="margin_md button1">Apply</button>
                                         </div>
                                 </div>
-                                <!-- <input type="checkbox" class="myCheckbox" value="fold1"> fold1
-                                <input type="checkbox" class="myCheckbox" value="fold2"> fold2
-                                <input type="checkbox" class="myCheckbox" value="fold3"> fold3
-                                <input type="checkbox" class="myCheckbox" value="fold4"> fold4
-                                <input type="checkbox" class="myCheckbox" value="fold5"> fold5
-                                <button id="apply_fold" class="applyBTN">Apply</button>
-                                <div id="content"></div> -->
                         </div>
                 </div>
                 <div id="_7_modelselect">
@@ -87,18 +85,37 @@
                                                 </select>
                                         </div>
                                         <div class="apply">
-                                                <button id="k_apply" class="margin_md botton1">Apply</button>
+                                                <button id="k_apply" class="margin_md button1">Apply</button>
                                         </div>
                                 </div>
                         </div>
                 </div>
                 <div id="_8_featureselect">
-                        <div class="viz visView" id="sec8"></div>
+                        <div class="viz visView" id="sec8_1">
+                                <div class="controler_checkbox text-sm">
+                                        <input type="checkbox" class="age_box margin_lg" value="1" checked> feature1
+                                        <br>
+                                        <input type="checkbox" class="age_box margin_lg" value="2" checked> feature2
+                                        <br>
+                                        <input type="checkbox" class="age_box margin_lg" value="3" checked> feature3
+                                        <br>
+                                        <input type="checkbox" class="age_box margin_lg" value="4" checked> feature4
+                                        <br>
+                                        <!-- <button id="feature_apply" class="margin_md button1">Apply</button> -->
+                                        <div class="apply">
+                                                <button id="feature_apply" class="margin_md button1">Apply</button>
+                                        </div>
+                                </div>
+                               
+                        </div>
                 </div>
+                <!-- <div id="_9_featureselect">
+                        <div class="viz visView" id="sec9_1"></div>
+                </div> -->
 
                 <!-- Add a section block for every text we want -->
                 <div id="sections", class="text-posi">
-                        <div class="section-text" id="sec1_text">
+                        <div class="section-text" id="sec1_1_1text">
                                 sec1_text _1_intro
                                 <br>Statistical analysis of the models performance help inform decisions on which models are appropriate for the given task. Comparing how all of the test cases perform, helps ensure the business requirement is met whne it is ultimately deployed.
                                 <p class="block"></p>
@@ -138,6 +155,11 @@
                                 <br>Statistical analysis of the models performance help inform decisions on which models are appropriate for the given task. Comparing how all of the test cases perform, helps ensure the business requirement is met whne it is ultimately deployed.
                                 <p class="block"></p>
                         </div>
+                        <div class="section-text" id="sec4_6_1_text">
+                                sec4_6_1_text _4_comparison
+                                <br>Statistical analysis of the models performance help inform decisions on which models are appropriate for the given task. Comparing how all of the test cases perform, helps ensure the business requirement is met whne it is ultimately deployed.
+                                <p class="block"></p>
+                        </div>
                         <div class="section-text" id="sec5_text">
                                 sec5_text _5_kfold
                                 <br>Statistical analysis of the models performance help inform decisions on which models are appropriate for the given task. Comparing how all of the test cases perform, helps ensure the business requirement is met whne it is ultimately deployed.
@@ -158,6 +180,11 @@
                                 <br>Statistical analysis of the models performance help inform decisions on which models are appropriate for the given task. Comparing how all of the test cases perform, helps ensure the business requirement is met whne it is ultimately deployed.
                                 <p class="block"></p>
                         </div>
+                        <!-- <div class="section-text" id="sec9_text">
+                                sec8_text _9_featureselect
+                                <br>Statistical analysis of the models performance help inform decisions on which models are appropriate for the given task. Comparing how all of the test cases perform, helps ensure the business requirement is met whne it is ultimately deployed.
+                                <p class="block"></p>
+                        </div> -->
                 </div>
         </div>
 </body>
@@ -171,9 +198,11 @@
 
 <script>
         // constants
+        var w_width = window.innerWidth/1.37;
+        var w_height = window.innerHeight;
         var width = 680
-        var widthMargin = 20
         var height = 640
+        var widthMargin = 20
         var heightMargin = 60
 </script>
 <!--<script src="iris.csv"></script>-->
@@ -181,6 +210,8 @@
 <script src="https://d3js.org/d3-hexbin.v0.2.min.js"></script>
 <script src="graph-scroll.js"></script>
 <script src="tooltip.js"></script>
+
+<script src="sec1_1_1.js"></script>
 
 <script src="sec2_1_1.js"></script>
 <script src="sec2_1_2.js"></script>
@@ -191,10 +222,14 @@
 <script src="sec4_1_1.js"></script>
 <script src="sec4_2_1.js"></script>
 <script src="sec4_3_1.js"></script>
+<script src="sec4_6_1.js"></script>
 
 <script src="sec5_1_1.js"></script>
 
 <script src="sec6_1_1.js"></script>
 <script src="sec7_1_1.js"></script>
+<script src="sec8_1_1.js"></script>
+
+<!-- <script src="sec9_1_1.js"></script> -->
 <script src="main.js"></script>
 </html>

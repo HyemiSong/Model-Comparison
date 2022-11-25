@@ -19,8 +19,8 @@ function sec4_2_1(){
   d3.csv('iris.csv').then(function(dataset) {
     //console.table(dataset)
     var svg = d3.select('#sec4_2').append('svg')
-    .attr('width', width)
-    .attr('height', height)
+    .attr('width', w_width)
+    .attr('height', w_height)
 
     var g = svg.selectAll("g")
     .data(dataset)

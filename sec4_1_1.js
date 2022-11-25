@@ -22,8 +22,8 @@ function sec4_1_1(){
     console.log(dataset.length)
 
     var svg = d3.select('#sec4_1').append('svg')
-    .attr('width', width)
-    .attr('height', height)
+    .attr('width', w_width)
+    .attr('height', w_height)
 
     svg.append('g').attr('class', 'x axis')
     .attr("transform", "translate("+widthMargin+","+(height-heightMargin)+")")
