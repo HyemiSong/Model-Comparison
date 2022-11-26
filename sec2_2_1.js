@@ -413,7 +413,7 @@ function display_sec2_2_1(error, data) {
  * Sets up the layout buttons to allow for toggling between view modes.
  */
 function setupButtons() {
-  d3.select('#toolbar')
+  d3.select('#toolbar').style('display', 'block')
     .selectAll('.button')
     .on('click', function () {
       // Remove active class from all buttons

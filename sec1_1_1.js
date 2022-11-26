@@ -3,6 +3,7 @@
 function sec1_1_1(){
     console.log("svg1-1-1")
     d3.select(".svg2-1-1").remove()
+    d3.select('#toolbar').style('display', 'none');
 
     var radius = 400;
     var data=[1,2,3,4]
@@ -55,6 +56,17 @@ function sec1_1_1(){
         .attr('r', function(d, i) {return i == 0 ? radius : radius/(i*2)})
         .on("end", repeat);  // when the transition finishes start again
     };
+
+    var title1 = svg.append('text').text('Learning').attr("class", "text-mlg").attr("fill", mainColor['darkblue'])
+    var title2 = svg.append('text').text('ML Model Comparison').attr("class", "text-mlg").attr("fill", mainColor['darkblue'])
+    title1.attr('transform', function(d, i) {return 'translate('+ (w_width/20) +','+((w_height/2)-30) +')'})
+    title2.attr('transform', function(d, i) {return 'translate('+ (w_width/20) +','+((w_height/2)+30) +')'})
+
+    // visContainer.append('text').attr('class','label_iris irisCircle').attr('fill','black')
+    // .text('Versicolor').attr('transform','translate(-48, -110)').attr('opacity','0')
+    // .transition(transition_1000).attr('opacity','1')
+
+
 
   }//end of func
   
