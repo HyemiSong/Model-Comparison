@@ -33,14 +33,14 @@ function sec2_1_1(){
       .transition()
       .duration(800)
       .attr('r', radius*0.5)
-      .attr("fill", '#f0e247')
+      .attr("fill", mainColor['yellow'])
  
-     var imgSize = 300
-     var img = visContainer.append('image')
-     .attr('href', 'static/iris.png')
-     .attr('height', imgSize)
-     .attr('width', imgSize)
-     .attr('transform', function(d, i) {return 'translate('+ (-imgSize/2) +','+ (-imgSize/2) +')'})
+    var imgSize = 300
+    var img = visContainer.append('image')
+      .attr('href', 'static/iris.png')
+      .attr('height', imgSize)
+      .attr('width', imgSize)
+      .attr('transform', function(d, i) {return 'translate('+ (-imgSize/2) +','+ (-imgSize/2) +')'})
     
     const transitionPath = d3.transition().ease(d3.easeSin).duration(500);
     var sepallaxis = visContainer.append('line').attr('class','sepal sepalAxisX')

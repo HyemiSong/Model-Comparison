@@ -71,9 +71,9 @@ html, body {
     font-weight: 200;;
 }
 
-.intro_title{
+.intro_title, svg{
     font-family: 'Comfortaa', cursive;
-    }
+}
 
 
 /*btn*/
@@ -187,4 +187,9 @@ line {
 
 .tooltip .name {
   font-weight:bold;
+}
+
+
+.label_iris{
+    font-size: 1.2em;
 }
