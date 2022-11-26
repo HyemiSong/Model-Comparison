@@ -1,10 +1,14 @@
 function sec2_1_1(){
+  console.log("svg2-1-1")
+  d3.select(".svg1-1-1").remove()
+  d3.select(".svg2-1-2").remove()
+  d3.select(".svg2-2-1").remove()
+
     var radius = 400;
     var size = 5.1 
     var size1 = 3.3
 
-    var svg = d3.select("#sec2_1")
-    .append('svg')
+    var svg = d3.select("#sec2_1").append('svg').attr("class", "svg2-1-1")
     .attr('width', w_width)
     .attr('height', w_height)
   

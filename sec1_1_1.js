@@ -1,11 +1,13 @@
 // _4_model comparison
 
 function sec1_1_1(){
+    console.log("svg1-1-1")
+    d3.select(".svg2-1-1").remove()
 
     var radius = 400;
     var data=[1,2,3,4]
     
-    var svg = d3.select('#sec1_1').append('svg')
+    var svg = d3.select('#sec1_1').append('svg').attr("class", "svg1-1-1")
     .attr('width', w_width)
     .attr('height', w_height)
 

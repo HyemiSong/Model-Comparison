@@ -40,7 +40,9 @@ d3.graphScroll()
     .sections(d3.selectAll('#sections > div'))
     .on('active', function (i) {
         console.log("At section " + i);
-        updateViz(i)
+        d3.select(viz_ids[i]).style('display','block')
+        viz_fns[i]();
+        // updateViz(i)
     })
 
 function updateViz(i) {

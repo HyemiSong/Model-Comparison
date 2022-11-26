@@ -5,12 +5,18 @@ function delay(milliseconds){
   }
 
 async function sec2_1_2(){
+  console.log("svg2-1-2")
+  // d3.select(".svg2-1-2").remove()
+  d3.select(".svg2-2-1").remove()
+  d3.selectAll(".irisCircle").remove()
+  
+  
     var radius = 400;
     var size = 5.1 
     var size1 = 3.3
     
     var svg = d3.select("#sec2_1")
-    .select('svg')
+    .select('svg').attr("class", "svg2-1-2")
     
     svg.select('image').attr('opacity',1).transition(transition_500).attr('opacity', 0)
     svg.select('defs').selectAll('marker').selectAll('polygon').transition(transition_800).attr('fill','black')
@@ -23,7 +29,8 @@ async function sec2_1_2(){
     svg.selectAll('circle.bcCircle').remove()
 
     //versicolor, center circle
-    var centerCircle = visContainer.append('ellipse').attr('fill', mainColor['yellow'])
+    var centerCircle = visContainer.append('ellipse').attr("class", "irisCircle")
+      .attr('fill', mainColor['yellow'])
       .attr('rx',radius*0.5).attr('ry', radius*0.5).attr('cx',0).attr('cy',0)
       .attr('stroke','black').attr('stroke-dasharray','4')
       .attr('rx',radius*0.5).attr('ry', radius*0.5).attr('cx',0).attr('cy',0)
@@ -39,7 +46,7 @@ async function sec2_1_2(){
 
       svg.selectAll('line')
       //versicolor
-      visContainer.append('text').attr('class','label_iris').attr('fill','black')
+      visContainer.append('text').attr('class','label_iris irisCircle').attr('fill','black')
         .text('Versicolor').attr('transform','translate(-48, -110)').attr('opacity','0')
         .transition(transition_1000).attr('opacity','1')
 
@@ -49,18 +56,20 @@ async function sec2_1_2(){
     await delay(800);
 
       //Setosa:
-      visContainer.append('ellipse').attr('fill','none').attr('rx','50').attr('ry','70').attr('cx','0').attr('cy','0')
+      visContainer.append('ellipse').attr("class", "irisCircle")
+        .attr('fill','none').attr('rx','50').attr('ry','70').attr('cx','0').attr('cy','0')
         .attr('stroke', mainColor['yellow']).attr('stroke-dasharray','4')
         .attr('stroke-width','1')
         .transition().duration(duration_800)
         .attr('rx','70').attr('ry','58').attr('cx','250')
         .attr('stroke-width','3')
       
-      visContainer.append('text').attr('class','label_iris').attr('fill','black')
+      visContainer.append('text').attr("class", "label_iris irisCircle")
+        .attr('fill','black')
         .text('Setosa').attr('transform','translate(215,-110)').attr('opacity','0')
         .transition().duration(duration_800).attr('opacity','1')
 
-      visContainer.append('line').attr('class','sepal')
+      visContainer.append('line').attr('class','sepal irisCircle')
         .attr('stroke', mainColor['darkblue']).attr('stroke-width', '2')
         .attr('x1', '0').attr('x2', '0')
         .attr('y1','57').attr('y2', '-48')
@@ -68,7 +77,7 @@ async function sec2_1_2(){
         .transition().duration(duration_800)
         .attr('x1', '261').attr('x2','261')
     
-      visContainer.append('line').attr('class','sepal')
+      visContainer.append('line').attr('class','sepal irisCircle')
         .attr('stroke', mainColor['darkblue']).attr('stroke-width', '2')
         .attr('x1', '0').attr('x2', '0')
         .attr('y1','0').attr('y2', '0')
@@ -77,18 +86,20 @@ async function sec2_1_2(){
         .attr('x1', '180').attr('x2','310')
     
       // Virginica:
-      visContainer.append('ellipse').attr('fill','none').attr('rx','50').attr('ry','70').attr('cx','0').attr('cy','0')
+      visContainer.append('ellipse').attr("class", "irisCircle")
+      .attr('fill','none').attr('rx','50').attr('ry','70').attr('cx','0').attr('cy','0')
       .attr('stroke',mainColor['yellow']).attr('stroke-dasharray','4')
       .attr('stroke-width','1')
       .transition().duration(duration_800)
       .attr('rx','50').attr('ry','70').attr('cx','-250')
       .attr('stroke-width','3')
       
-      visContainer.append('text').attr('class','label_iris').attr('fill','black')
+      visContainer.append('text').attr('class','label_iris irisCircle')
+      .attr('fill','black')
       .text('Virginica').attr('transform','translate(-290, -110)').attr('opacity','0')
       .transition().duration(duration_800).attr('opacity','1')
 
-      visContainer.append('line').attr('class','sepal')
+      visContainer.append('line').attr('class','sepal irisCircle')
         .attr('stroke', mainColor['darkblue']).attr('stroke-width', '2')
         .attr('x1', '0').attr('x2', '0')
         .attr('y1','66').attr('y2', '-56')
@@ -96,7 +107,7 @@ async function sec2_1_2(){
         .transition().duration(duration_800)
         .attr('x1', '-261').attr('x2','-261')
     
-      visContainer.append('line').attr('class','sepal')
+      visContainer.append('line').attr('class','sepal irisCircle')
         .attr('stroke', mainColor['darkblue']).attr('stroke-width', '2')
         .attr('x1', '0').attr('x2', '0')
         .attr('y1','0').attr('y2', '0')

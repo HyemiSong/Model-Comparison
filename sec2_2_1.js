@@ -7,6 +7,10 @@
  *
  */
 function bubbleChart() {
+  d3.select(".svg2-1-1").remove()
+  d3.select(".svg2-1-2").remove()
+  d3.selectAll(".irisCircle").remove()
+
   // Constants for sizing
   var width = 680;
   var height = 640;
@@ -155,7 +159,7 @@ function bubbleChart() {
 
     // Create a SVG element inside the provided selector
     // with desired size.
-    svg = d3.select(selector).append('svg')
+    svg = d3.select(selector).append('svg').attr("class", "svg2-2-1")
       .attr('width', w_width)
       .attr('height', w_height)
 
