@@ -26,17 +26,17 @@ function sec8_1_1(){
       .domain(pieData)
       .range([mainColor['lightgreen'], mainColor['darkgreen']])
   
-    //time
-    var duration_2500 = 2500    
-    var duration_2000 = 2000
-    var duration_500 = 500
-    var duration_250 = 250
+    // //time
+    // var duration_2500 = 2500    
+    // var duration_2000 = 2000
+    // var duration_500 = 500
+    // var duration_250 = 250
   
-    // transition
-    const transition_2500 = d3.transition().ease(d3.easeSin).duration(duration_2500);
-    const transition_2000 = d3.transition().ease(d3.easeSin).duration(duration_2000);
-    const transition_500 = d3.transition().ease(d3.easeSin).duration(duration_500);
-    const transition_250 = d3.transition().ease(d3.easeSin).duration(duration_250);
+    // // transition
+    // const transition_2500 = d3.transition().ease(d3.easeSin).duration(duration_2500);
+    // const transition_2000 = d3.transition().ease(d3.easeSin).duration(duration_2000);
+    // const transition_500 = d3.transition().ease(d3.easeSin).duration(duration_500);
+    // const transition_250 = d3.transition().ease(d3.easeSin).duration(duration_250);
   
     // pieArea position 
     pieArea

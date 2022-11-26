@@ -6,6 +6,9 @@
         <title>Main Page</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
         <link rel="stylesheet" href="./style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -118,6 +121,10 @@
                         <div class="section-text" id="sec1_1_1text">
                                 sec1_text _1_intro
                                 <br>Statistical analysis of the models performance help inform decisions on which models are appropriate for the given task. Comparing how all of the test cases perform, helps ensure the business requirement is met whne it is ultimately deployed.
+                                <br>Statistical analysis of the models performance help inform decisions on which models are appropriate for the given task. Comparing how all of the test cases perform, helps ensure the business requirement is met whne it is ultimately deployed.
+                                <br>Statistical analysis of the models performance help inform decisions on which models are appropriate for the given task. Comparing how all of the test cases perform, helps ensure the business requirement is met whne it is ultimately deployed.
+                                <br>Statistical analysis of the models performance help inform decisions on which models are appropriate for the given task. Comparing how all of the test cases perform, helps ensure the business requirement is met whne it is ultimately deployed.
+                                <br>Statistical analysis of the models performance help inform decisions on which models are appropriate for the given task. Comparing how all of the test cases perform, helps ensure the business requirement is met whne it is ultimately deployed.
                                 <p class="block"></p>
                         </div>
                         <div class="section-text" id="sec2_1_1_text">
@@ -195,7 +202,6 @@
         <!-- Include Plotly.js -->
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
-
 <script>
         // constants
         var w_width = window.innerWidth/1.37;
@@ -204,10 +210,30 @@
         var height = 640
         var widthMargin = 20
         var heightMargin = 60
+        var mainColor = {"darkgreen": '#379237', 'lightgreen':"#00FFE0", 'darkblue':"#323D52", 'red':'#C70039', 'darkred':'#900C3F', 'lightred':"#FF5733", 'yellow':"#f0e247"}
+        //time
+        var duration_2500 = 2500    
+        var duration_2000 = 2000
+        var duration_1000 = 1000
+        var duration_800 = 800
+        var duration_500 = 500
+        var duration_250 = 250
+        
+        // transition
+        const transition_2500 = d3.transition().ease(d3.easeSin).duration(duration_2500);
+        const transition_2000 = d3.transition().ease(d3.easeSin).duration(duration_2000);
+        const transition_1000 = d3.transition().ease(d3.easeSin).duration(duration_1000);
+        const transition_800 = d3.transition().ease(d3.easeSin).duration(duration_800);
+        const transition_500 = d3.transition().ease(d3.easeSin).duration(duration_500);
+        const transition_250 = d3.transition().ease(d3.easeSin).duration(duration_250);
+
+        //vis container
+        var visContainer;
 </script>
 <!--<script src="iris.csv"></script>-->
 <script src="rmse.js"></script>
 <script src="https://d3js.org/d3-hexbin.v0.2.min.js"></script>
+
 <script src="graph-scroll.js"></script>
 <script src="tooltip.js"></script>
 
@@ -232,4 +258,5 @@
 
 <!-- <script src="sec9_1_1.js"></script> -->
 <script src="main.js"></script>
+
 </html>
